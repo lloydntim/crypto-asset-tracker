@@ -1,7 +1,9 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+
+import './i18n';
 
 import { AppTest } from './AppTest';
 
 /* eslint-disable no-undef */
-ReactDOM.render(<AppTest />, document.getElementById('root'));
+render(<AppTest />, document.getElementById('root'));
