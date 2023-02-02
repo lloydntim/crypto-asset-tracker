@@ -1,9 +1,16 @@
 import * as React from 'react';
 import { render } from 'react-dom';
+import { ApolloProvider } from '@apollo/client';
 
-import './i18n';
-
+import { createClient } from './graphql';
 import { AppTest } from './AppTest';
 
+import './localisation/i18n';
+
 /* eslint-disable no-undef */
-render(<AppTest />, document.getElementById('root'));
+render(
+  <ApolloProvider client={createClient()}>
+    <AppTest />
+  </ApolloProvider>,
+  document.getElementById('root'),
+);
